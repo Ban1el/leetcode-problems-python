@@ -15,11 +15,8 @@ class Solution:
         for i in range(len(s)):
             countS[s[i]] = 1 + countS.get(s[i], 0)
             countT[t[i]] = 1 + countT.get(t[i], 0)
-            print("Count S: " + str(countS[s[i]]) + " Count T: " + str(countT[t[i]]))
-            
-        print("")    
+               
         for c in countS:
-            print("Counts: " + str(countT.get(c, 0)))
             if countS[c] != countT.get(c, 0):
                 return False
         return True
